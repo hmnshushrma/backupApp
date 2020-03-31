@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const rootDir = path.resolve(__dirname, '.')
-const srcDir = path.resolve(__dirname, '.', 'src')
+// const srcDir = path.resolve(__dirname, '.', 'src')
 const distDir = path.resolve(__dirname, '.', 'dist')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV !== 'production'
@@ -93,7 +93,6 @@ module.exports = () => {
         name: true,
         cacheGroups: {
           default: false,
-          vendors: false,
           vendors: {
             chunks: 'all',
             test: /[\\/]node_modules[\\/]/,
